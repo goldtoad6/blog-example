@@ -43,6 +43,7 @@
 - **版本打包** - .NET 项目版本管理
 - **代码质量** - SonarQube 集成、P3C 规范检查
 - **YouTrack 集成** - 问题跟踪通知
+- **DevSecOps 安全扫描** - Dependency-Check 依赖漏洞扫描与安全实践
 
 ### ☸️ Kubernetes (Kubernetes)
 - **集群部署** - 单节点、高可用集群部署
@@ -190,7 +191,8 @@ blog-example/
 │   ├── pipeline-sonarqube-python-dingtalk-notifications-webhook/  # SonarQube + 钉钉
 │   ├── sonarqube-p3c/              # P3C 规范检查
 │   ├── sonarqube-python-dingtalk-notifications/  # SonarQube 通知
-│   └── youtrack-dingtalk-notifications/  # YouTrack 通知
+│   ├── youtrack-dingtalk-notifications/  # YouTrack 通知
+│   └── devsecops-dependency-check-guide/  # DevSecOps 安全扫描指南
 ├── Kubernetes/                      # Kubernetes 部署
 │   ├── k8s-dashboard/              # Dashboard
 │   ├── k8s-ek/                     # Elasticsearch + Kibana
@@ -328,6 +330,16 @@ A: 可以在 GitHub 提 Issue，或者通过博客留言交流。
 ## 📅 更新日志
 
 ### 最近更新
+
+<details>
+<summary><b>📆 2026-02</b> - DevSecOps 安全实践</summary>
+
+- 🔒 DevSecOps Dependency-Check 完整指南（依赖漏洞扫描、安全门禁、CI/CD 集成、抑制规则管理）
+- 📦 包含 Bash、Docker、PowerShell 脚本示例
+- 🔧 Maven、npm、Jenkins 完整配置文件
+- 📊 Python 报告解析器与预提交钩子
+
+</details>
 
 <details>
 <summary><b>📆 2026-01</b> - LangChain 框架实践系列</summary>

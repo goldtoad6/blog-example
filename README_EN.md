@@ -43,6 +43,7 @@ The code here has been used in actual projects, not toy examples. Each directory
 - **Version Packaging** - .NET project version management
 - **Code Quality** - SonarQube integration, P3C specification checks
 - **YouTrack Integration** - Issue tracking notifications
+- **DevSecOps Security Scanning** - Dependency-Check vulnerability scanning and security practices
 
 ### ☸️ Kubernetes (Kubernetes)
 - **Cluster Deployment** - Single-node, high-availability cluster deployment
@@ -190,7 +191,8 @@ blog-example/
 │   ├── pipeline-sonarqube-python-dingtalk-notifications-webhook/  # SonarQube + DingTalk
 │   ├── sonarqube-p3c/              # P3C Specification Checks
 │   ├── sonarqube-python-dingtalk-notifications/  # SonarQube Notifications
-│   └── youtrack-dingtalk-notifications/  # YouTrack Notifications
+│   ├── youtrack-dingtalk-notifications/  # YouTrack Notifications
+│   └── devsecops-dependency-check-guide/  # DevSecOps Security Scanning Guide
 ├── Kubernetes/                      # Kubernetes Deployment
 │   ├── k8s-dashboard/              # Dashboard
 │   ├── k8s-ek/                     # Elasticsearch + Kibana
@@ -328,6 +330,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📅 Changelog
 
 ### Recent Updates
+
+<details>
+<summary><b>📆 2026-02</b> - DevSecOps Security Practices</summary>
+
+- 🔒 Complete DevSecOps Dependency-Check Guide (dependency vulnerability scanning, security gates, CI/CD integration, suppression rule management)
+- 📦 Includes Bash, Docker, PowerShell script examples
+- 🔧 Complete configuration files for Maven, npm, and Jenkins
+- 📊 Python report parser and pre-commit hooks
+
+</details>
 
 <details>
 <summary><b>📆 2026-01</b> - LangChain Framework Practice Series</summary>
