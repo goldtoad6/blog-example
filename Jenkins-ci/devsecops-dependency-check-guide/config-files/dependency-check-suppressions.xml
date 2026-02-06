@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions>
+    <!-- 抑制误报的漏洞 -->
+    <suppress>
+        <notes><![CDATA[
+            这是误报，该漏洞不适用于我们的使用场景。
+            原因：我们使用的版本不包含受影响的代码路径。
+            审核人：张三
+            审核日期：2025-02-06
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.example/.*@.*$</packageUrl>
+        <cve>CVE-2021-44228</cve>
+    </suppress>
+
+    <!-- 抑制测试依赖的漏洞 -->
+    <suppress>
+        <notes><![CDATA[
+            测试依赖，不会部署到生产环境。
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.testng/.*@.*$</packageUrl>
+        <vulnerabilityName regex="true">.*</vulnerabilityName>
+    </suppress>
+
+    <!-- 抑制低风险漏洞 -->
+    <suppress>
+        <notes><![CDATA[
+            CVSS 评分低于 4.0 的低风险漏洞，按计划修复。
+        ]]></notes>
+        <cvssBelow>4.0</cvssBelow>
+    </suppress>
+</suppressions>

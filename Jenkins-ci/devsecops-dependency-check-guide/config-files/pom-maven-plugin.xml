@@ -1,0 +1,42 @@
+<project>
+    ...
+    <build>
+        <plugins>
+            <!-- OWASP Dependency-Check Plugin -->
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>12.1.0</version>
+                <configuration>
+                    <!-- NVD API Key -->
+                    <nvdApiKey>${nvd.api.key}</nvdApiKey>
+
+                    <!-- 失败阈值：CVSS >= 7 时构建失败 -->
+                    <failBuildOnCVSS>7</failBuildOnCVSS>
+
+                    <!-- 报告格式 -->
+                    <formats>
+                        <format>HTML</format>
+                        <format>XML</format>
+                        <format>JSON</format>
+                    </formats>
+
+                    <!-- 抑制文件 -->
+                    <suppressionFiles>
+                        <suppressionFile>dependency-check-suppressions.xml</suppressionFile>
+                    </suppressionFiles>
+
+                    <!-- 启用实验性分析器 -->
+                    <enableExperimental>true</enableExperimental>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

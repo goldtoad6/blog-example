@@ -1,0 +1,11 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dependency-check": "dependency-check --project my-app --scan . --out ./reports --format JSON",
+    "dependency-check:fix": "dependency-check --project my-app --scan . --out ./reports --format JSON --audit"
+  },
+  "devDependencies": {
+    "@dependency-check/cli": "^12.1.0"
+  }
+}

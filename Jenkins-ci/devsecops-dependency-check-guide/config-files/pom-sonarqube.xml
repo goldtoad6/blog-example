@@ -1,0 +1,33 @@
+<profiles>
+    <profile>
+        <id>sonar</id>
+        <build>
+            <plugins>
+                <!-- Dependency-Check -->
+                <plugin>
+                    <groupId>org.owasp</groupId>
+                    <artifactId>dependency-check-maven</artifactId>
+                    <version>12.1.0</version>
+                    <configuration>
+                        <format>XML</format>
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                    </configuration>
+                </plugin>
+
+                <!-- SonarQube -->
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.9.1.2184</version>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+</profiles>
+
+<properties>
+    <!-- SonarQube 配置 -->
+    <sonar.host.url>http://sonarqube.company.com:9000</sonar.host.url>
+    <sonar.dependencyCheck.reportPath>${project.build.directory}/dependency-check-report.xml</sonar.dependencyCheck.reportPath>
+    <sonar.dependencyCheck.htmlReportPath>${project.build.directory}/dependency-check-report.html</sonar.dependencyCheck.htmlReportPath>
+</properties>
